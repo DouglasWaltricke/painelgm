@@ -1,0 +1,90 @@
+body{
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color:#f3f3f4 !important;
+    
+}
+
+a{
+	text-decoration: none;
+	color:white;
+}
+
+a:active{
+	text-decoration: none;
+	color:white;
+}
+
+a:visited{
+	text-decoration: none;
+	color:white;
+}
+a:hover{
+	text-decoration: none;
+	color:white;
+}
+
+i{
+	float:right;
+	cursor:pointer;
+}
+
+.layout-margin-small{
+	margin:5px !important;
+}
+
+.layout-margin{
+	margin:10px !important;
+}
+.layout-margin-big{
+	margin:15px !important;
+}
+
+.layout-margin-left-small{
+	margin-left:5px !important;
+}
+
+.layout-margin-left{
+	margin-left:10px !important;
+}
+.layout-margin-right{
+	margin:5px !important;
+}
+.layout-margin-top{
+	margin-top:5px !important;
+}
+
+.layout-margin-bottom{
+	margin-bottom:5px !important;
+}
+
+.layout-margin-top-big{
+	margin-top:15px !important;
+}
+
+.layout-no-margin{
+	margin:0px !important;
+}
+
+.layout-no-padding{
+	padding:0px !important;
+}
+
+.layout-padding-small{
+	padding:5px !important;
+}
+
+.layout-padding{
+	padding:10px !important;
+}
+
+.layout-padding-big{
+	padding:10px !important;
+}
+
+.layout-no-border-bottom{
+	border-bottom:0px !important;
+}
+
+.layout-no-padding-right{
+	padding-right:0px !important;
+}

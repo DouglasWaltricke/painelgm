@@ -1,0 +1,40 @@
+<div ng-include="'./include/menu.html'"></div> 
+<div ng-include="'./include/topbar.html'"></div> 
+
+<div class="container-fluid">
+	<div class="col-ls-10 col-md-10 col-sm-10 col-xs-10">
+		<div class="col-ls-10 col-md-12 col-ls-offset-1 col-xs-12">
+			<feedback mensagem="{{mensagem}}"></feedback>
+
+			<form class="box-cadastro col-ls-12 col-md-12 layout-padding" name="formulario">
+			  <div class="row">
+				  	<div class="row">
+						<h2 class="text-center">Cadastro de divulgação</h2>
+					</div>
+					<div class="col-ls-10 col-md-10 col-ls-offset-1 col-md-offset-1 col-sm-12 col-xs-12">
+						<div class="col-md-12 layout-margin">
+							<label class="col-md-12 layout-no-margin">Link da pagina ou grupo</label>
+							<input type="text" class="form-control" placeholder="" ng-model="urlTemp">
+							<button ng-click="addUrl(urlTemp)" class="btn btn-primary addDivulgacao pull-right">
+								+
+							</button>
+						</div>
+						<div class="col-md-12 layout-margin" ng-if="divulgacao.paginaUrl.length">
+							<label class="col-md-12 layout-no-margin">Links adicionados</label>
+							<input type="text" class="form-control" placeholder="" ng-model="url.url" ng-repeat="url in divulgacao.paginaUrl track by $index" required>
+						</div>
+						<div class="col-md-12 layout-margin">
+							<label class="col-md-12 layout-no-margin">Quantidade de amigos atingida</label>
+							<input type="number" class="form-control" placeholder="" ng-model="divulgacao.quantidade" required>
+						</div>
+						<div class="col-md-12 layout-no-padding-right" >
+							<button ng-click="adicionarDivulgacao()" class="btn btn-primary pull-right">
+								Salvar
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

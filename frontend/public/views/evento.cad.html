@@ -1,0 +1,82 @@
+<div ng-include="'./include/menu.html'"></div> 
+<div ng-include="'./include/topbar.html'"></div> 
+
+<div class="container-fluid">
+	<div class="col-ls-10 col-md-10 col-sm-10 col-xs-10 box-tables">
+		<div class="col-ls-10 col-md-12 col-ls-offset-1 col-xs-12">
+			<feedback mensagem="{{mensagem}}"></feedback>
+			<form class="box-cadastro col-ls-12 col-md-12 layout-padding" ng-submit="adicionarEvento()" name="formulario">
+				  <div class="row">
+				  	<div class="row">
+						<h2 class="text-center">Cadastro do evento</h2>
+					</div>
+						<div class="col-ls-6 col-md-6">
+							<div class="col-md-12 layout-margin">
+								<label class="col-md-12 layout-no-margin">Nick do player</label>
+								<input type="text" class="form-control" placeholder="" ng-model="evento.player" name="nickPlayer" required>
+							</div>
+							<div class="col-md-12 layout-margin">
+								<label class="col-md-12 layout-no-margin">Nome do evento</label>
+								<input type="text" class="form-control" placeholder="" ng-model="evento.nome" required>
+							</div>
+				          	<div class="col-md-12 layout-margin">
+				          		<label class="col-md-12 layout-no-margin">Numero de eventos vencidos</label>
+								<input type="number" class="form-control" ng-model="evento.premiacao" required>
+				          	</div>
+						</div>
+
+						<div class="col-ls-6 col-md-6">
+							 <div class="col-md-12 layout-margin">
+									<label class="col-md-12 layout-no-margin">Print do evento</label>
+									<input class="form-control" type="text" class="" placeholder="URL da print" ng-model="evento.printUrl">
+							 </div>
+							 <div class="col-md-12 layout-margin">
+							 	<img src="{{evento.printUrl ? evento.printUrl : 'http://i.imgur.com/rjYBHF5.png'}}" class="img-responsive center-block">
+							 </div>
+						</div>
+					</div>
+				<div class="col-md-12">
+					<button type="submit" class="btn btn-primary pull-right" ng-disabled="formulario.$invalid">
+						Adicionar a lista
+					</button>
+				</div>
+			</form>
+			<div class="box-lista-evento col-md-12 layout-padding layout-margin-top-big" ng-if="listaEventos.eventos.length">
+				<form class="form-inline" name="formulario-lista" ng-submit="enviarLista()">
+					<div class="row">
+						<div class="col-ls-12 col-md-12">
+							<h1 class="text-center">Lista de eventos do dia</h1>
+						</div>
+					</div>
+					<table class="table table-bordered table-hover">
+						<thead>
+						<tr>
+							<th>Nick do player</th>
+							<th>Nome do evento</th>
+							<th>Premiação</th>
+						</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="evento in listaEventos.eventos track by $index" ng-click="selecionaEvento(evento,evento._id)">
+							<td>{{evento.player}}</td>
+							<td>{{evento.nome}}</td>
+							<td>{{evento.premiacao}}</td>
+						</tr>
+						</tbody>
+				 	</table>
+		 			<div class="col-ls-12 col-md-12 layout-margin-top layout-margin-bottom">
+		 	      		<div class="col-ls-8 col-md-8">
+		 	      			<label>Data de realização dos eventos</label>
+		 	           	 	<input type="date" class="form-control" ng-model="listaEventos.dataEvento" required>
+		 	      		</div>
+		 	    	</div>
+		 			<div class="col-md-12">
+		 				<button type="submit" class="btn btn-primary pull-right layout-margin-bottom" ng-disabled="formulario-lista.$invalid">
+		 					Enviar lista
+		 				</button>
+		 			</div>  
+				</form>
+			</div>
+		 </div>
+	</div>
+</div>

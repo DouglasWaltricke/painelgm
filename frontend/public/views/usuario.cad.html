@@ -1,0 +1,47 @@
+<div ng-include="'./include/menu.html'"></div> 
+<div ng-include="'./include/topbar.html'"></div>
+
+<div class="container-fluid">
+	<div class="col-ls-10 col-md-10 col-xs-8">
+		<div class="col-ls-10 col-md-10 col-ls-offset-1 col-md-offset-1 col-xs-10">
+			<feedback mensagem="{{mensagem}}"></feedback>
+			<form class="box-cadastro col-ls-12 col-md-12 layout-padding" ng-submit="editarUsuario()">
+				  <div class="row">
+				  	<div class="row">
+						<h2 class="text-center">Informações do usuario</h2>
+					</div>
+						<div class="col-ls-6 col-md-6">
+							<!-- <div class="col-md-12 layout-margin">
+								<label class="col-md-12 layout-no-margin">Usuario</label>
+								<input type="text" class="form-control" placeholder="" ng-model="usuario.login" required>
+							</div> -->
+							<div class="col-md-12 layout-margin">
+								<label class="col-md-12 layout-no-margin">Senha</label>
+								<input type="text" class="form-control" placeholder="" ng-model="usuario.senha" required>
+							</div>
+				          	<div class="col-md-12 layout-margin">
+				          		<label class="col-md-12 layout-no-margin">Idade</label>
+								<input type="number" class="form-control" ng-model="usuario.idade" required>
+				          	</div>
+						</div>
+						<div class="col-ls-6 col-md-6">
+							 <div class="col-md-12 layout-margin">
+									<label class="col-md-12 layout-no-margin">Foto perfil</label>
+									<input class="form-control" ng-model="usuario.fotoUrl" type="text" class="" placeholder="URL da foto">
+							 </div>
+							 <div class="col-md-12 layout-margin">
+							 	<img ng-src="{{usuario.fotoUrl ? usuario.fotoUrl : 'http://i.imgur.com/6c6pwky.png'}}" class="img-responsive center-block">
+						<!-- 	 	<img src="../imagens/default-image.png" class="img-responsive center-block"> -->
+							 </div>
+						</div>
+					</div>
+				<div class="col-md-12">
+					<button type="submit" class="btn btn-primary pull-right" ng-disabled="formulario.$invalid">
+						Salvar
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div> 
+

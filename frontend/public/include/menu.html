@@ -1,0 +1,23 @@
+<div class="col-ls-1 col-md-2 co-sm-2 col-xs-2 menu-lateral layout-no-padding" ng-controller="usuarioController">
+	<div class="row">
+		<div class="col-ls-12 col-md-12 box-perfil">
+				<img class="col-ls-8 col-md-8 col-ls-offset-2 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 box-perfil-imagem" ng-src="{{usuario.fotoUrl ? usuario.fotoUrl : '../imagens/user-default.png' }}">
+	   		<div class="col-md-12" style="height:100px">
+	   			<div class="col-ls-12 col-md-12 col-sm-12 col-xs-12 layout-margin-top-big">
+				 	<p class="text-center subtitulo"><a href="#/cadastro-usuario">Editar</a></p>
+			    	<p class="text-center subtitulo">{{usuario.login}}</p>
+	   			</div>
+			</div>
+		</div>
+	</div>
+	<ul class="nav nav-stacked">
+		<li role="presentation"><a href="#/dashboard">Rankings</a></li>
+		<li role="presentation"><a href="#/cadastro">Cadastrar eventos</a></li>
+		<li role="presentation"><a href="#/eventos">Listar eventos</a></li>
+		<li role="presentation"><a href="#/cadastro-divulgacao">Cadastrar divulgação</a></li>
+		<li role="presentation"><a href="#/lista-divulgacao">Listar divulgações</a></li>
+		<li role="presentation"><a href="#/cadastro-usuario">Usuario</a></li>
+<!-- 		<li role="presentation"><a href="#/tabela-horarios">Tabela de horários</a></li> -->
+		<li role="presentation" ng-click="sair()" class="active menuItem"><a href="#/">Sair</a></li>
+	</ul>
+</div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Painel de controle dos GMs</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/commom.css">
+		<link rel="stylesheet" href="css/menu.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/topbar.css">
+		<link rel="stylesheet" type="text/css" href="components/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/login.css">
+
+
+		<script type="text/javascript" src="js/lib/angular.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular-cookies.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular-resource.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular-animate.min.js"></script>
+		<script src="js/lib/angular-route.min.js"></script>
+		
+		<script src="js/main.js"></script>
+
+		<script src="js/controllers/evento.cad.ctrl.js"></script>
+		<script src="js/controllers/evento.list.ctrl.js"></script>
+		<script src="js/controllers/login.ctrl.js"></script>
+		<script src="js/controllers/usuario.ctrl.js"></script>
+		<script src="js/controllers/divulgacao.cad.ctrl.js"></script>
+		<script src="js/controllers/divulgacao.list.ctrl.js"></script>
+		<script src="js/controllers/dashboard.ctrl.js"></script>
+
+		<script src="js/services/evento-service.js"></script>
+		<script src="js/services/usuario-service.js"></script>
+		<script src="js/services/divulgacao-service.js"></script>
+
+		<script src="js/directives/diretivas.js"></script>
+		
+	</head>
+	<body ng-app="painelGm">
+		<div class="wrap">
+			<ng-view></ng-view> 
+		</div>   
+	</body>
+</html>
